@@ -1,0 +1,15 @@
+body.bg-dark {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+.bg-light {
+  background: #f9f9f9 !important;
+}
+
+.bg-primary {
+  background: #007bff !important;
+}
+.text-white {
+  color: #fff !important;
+}
