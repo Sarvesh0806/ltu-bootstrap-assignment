@@ -1,23 +1,18 @@
-prisma/schema.prisma
-// Run: npx prisma migrate dev --name init
-
-
+// prisma/schema.prisma
 generator client {
-provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
-
 
 datasource db {
-provider = "sqlite"
-url = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
-
 model Item {
-id String @id @default(cuid())
-title String
-description String?
-html String // generated HTML output stored here
-createdAt DateTime @default(now())
-updatedAt DateTime @updatedAt
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  html        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
